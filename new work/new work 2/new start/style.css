@@ -1,0 +1,21 @@
+h1{
+    color: rgb(255, 255, 255);
+    margin-left: 695px;
+}
+body{
+    background-color: lightpink;
+}
+.two{
+    background-color: blanchedalmond;
+    float: right;
+    display: inline;
+    border: 2px solid;
+}
+li{
+    display: inline;
+  text-align: center;
+}
+img{
+    width: 78px;
+    display: cover;
+}

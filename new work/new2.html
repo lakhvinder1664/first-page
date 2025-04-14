@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Hidden Input</title>
+</head>
+<body>
+    <h2>Order Form</h2>
+    <form action="/submit-order" method="post">
+        <!-- Hidden field for order ID -->
+        <input type="hidden" id="order-id" name="order_id" value="">
+
+        <label for="product">Product Name:</label>
+        <input type="text" id="product" name="product" value="Smartphone" readonly><br><br>
+
+        <button type="submit">Submit Order</button>
+    </form>
+
+    <script>
+        // Dynamically set the value of the hidden field
+        const orderId = "ORD-98765"; // Example order ID
+        document.getElementById("order-id").value = orderId;
+    </script>
+</body>
+</html>

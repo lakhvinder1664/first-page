@@ -1,0 +1,401 @@
+
+body {
+    background-color: rgb(174, 174, 174);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.topnavimages {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.logoimages img {
+    margin: 0 168px;
+    width: 34px;
+}
+
+.JaneBloglife {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 75px;
+}
+
+.janesworld {
+    background-color: black;
+    color: aliceblue;
+    padding: 5px;
+    display: inline-block;
+}
+
+h6 {
+    text-align: center;
+    font-size: 26px;
+}
+
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.bg-img {
+    width: 100%;
+}
+
+.bg-img img {
+    width: 100%;
+    height: auto;
+}
+
+.displayLeft {
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    text-align: left;
+}
+
+.displayLeft h1 {
+    font-size: 54px;
+    margin: 0;
+}
+
+.janestextcolor {
+    color: white;
+}
+
+.fashiontextcolor {
+    color: rgb(255, 193, 7);
+}
+
+
+.container {
+    padding: 20px;
+}
+
+.Heading1 {
+    background-color: rgb(174, 174, 174);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.Heading3 {
+    width: 61%;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+}
+
+.Heading3 img {
+    width: 100%;
+}
+.divheading4{
+    text-align: right;
+    background-color: #040404;;
+}
+.heading4 {
+    width: 35%;
+}
+
+.imgagepara p{
+    color: white;
+    font-size: 13px;
+    margin: auto;
+    padding: -11px;
+    width: 100%;
+}
+
+.heading4 img {
+    width: 100%;
+    margin-left: -5px;
+    margin-top: -1px;
+}
+.heading5 {
+    margin-top: 66px;
+    background-color: white;
+    padding: 15px;
+    width: 95%;
+}
+
+.heading5img h1 {
+    margin: auto;
+    text-align: left;
+    color: white;
+    background-color: black;
+    padding: 10px;
+}
+
+.border {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #000000;
+    padding: 10px 0;
+}
+
+.border img {
+    width: 60px;
+    height: 60px;
+    /* object-fit: cover; */
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.border h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.border h3 p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.buttonone{
+    color: #000000;
+    padding: 13px;
+    background-color: rgb(255 255 255);
+    width: 64px;
+}
+.buttontwo{ 
+    color: white;
+    padding: 13px;
+    background-color: rgb(0, 0, 0);
+    width: 96px;
+    float: right;
+}
+.buttontwo span{
+    color: black;
+    background-color: white;
+    
+}
+
+
+.Heading6 {
+    background-color: rgb(174, 174, 174);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.Heading7 {
+    margin-left: 19px;
+    width: 60%;
+    background-color: rgb(255, 255, 255);
+    padding: 12px;
+}
+
+.Heading7 img {
+    width: 100%;
+}
+
+.containers{
+    width: 1366px;
+    margin: auto;
+    background: #eee;
+}
+
+.border{
+    border-bottom:2px solid #000000;
+}
+.border h3 p{
+    text-align: center;
+}
+.containertwo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.divAdvertise{
+    margin-top: 1px
+}
+.Advertise {
+ 
+    margin: auto;
+    margin-right: 44px;
+    width: 339px;
+    background: white;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 62px;}
+/* .Advertise{
+    width: 44px;
+} */
+
+.AdvertiseHeader {
+    /* margin-left: 0px; */
+    margin: -47px;
+    background: black;
+    color: white;
+    padding: 55px;
+}
+
+.AdvertiseText {
+    margin: -47px;
+    padding: 55px;
+    background: lightgrey;
+    margin-top: 47px;
+}
+
+.heading6 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.Heading7 {
+    width: 60%;
+    background: white;
+    padding: 12px;
+}
+.TagPost{
+    background: white;
+    width: 457px;
+    margin-top: -12px
+}
+.TagPostBackground{
+    font-size: 37px;
+    margin-top: 49px;
+    background: black;
+    color: white;
+}
+
+.TagPostContent{
+    margin: 1px;
+}
+.TagPostContent p{
+    display: inline;
+    margin: 1px;
+    width: 119px;
+}
+.FashionLondon{
+    background-color: black;
+    color: aliceblue;
+}
+.InspirationContainer{
+    margin: auto;
+    background-color: #ffffff;
+    width: 413px;
+    margin-top: 37px;
+}
+.Inspiration img{
+    /* margin: inherit; */
+    width: 142px;
+}
+.InspirationHeader{
+    font-size: 30px;
+    padding: 9px;
+    color: white;
+    background: black;
+}
+.InspirationContainer {
+    margin: 0px;
+    background-color: #ffffff;
+    width: 438px;
+    margin-top: 20px;
+    padding: 11px;
+}
+
+.InspirationHeader {
+    font-size: 30px;
+    padding: 10px;
+    color: white;
+    background: black;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.image-grid img:hover {
+    transform: scale(1.05);
+}
+.FollowMeContainer{
+    float: right;
+    margin-top: 21px;
+    color: #000000;
+    background-color: white;
+    width: 459px;
+    margin-right: 49px;
+}
+.FollowMeHeader h3{
+    margin: 7px;
+    padding: 13px;
+    background-color: #000000;
+    color: white;
+}
+.FollowMeIcons img{
+    margin-left: 8px;
+    width: 30px;
+}
+.containerthree{
+    display: flex;
+}
+.Heading8 { 
+    display: flex;
+    background-color: rgb(174, 174, 174);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.Heading9 {
+    margin-top: 16px;
+    margin-left: 19px;
+    width: 60%;
+    background-color: rgb(255, 255, 255);
+    padding: 12px;
+}
+
+.Heading9 img {
+    width: 100%;
+}
+.SubscribeConatiner{
+    padding: 7px;
+    margin-top: 27px;
+    background-color: white;
+    float: right;
+    clear: right;
+    margin-right: 46px;
+}
+.SubscribeHeader{
+    font-size: 18px;
+    padding: 17px;
+    background-color: #000000;
+    color: white;
+}
+.SubscribeContent h3{
+    margin: auto;
+    padding: 6px;
+    text-align: center;
+    color: white;
+    background-color: #ed5656;
+}
+.bottomline{
+    margin-top: 30px;
+    width: 1513px;
+    clear: both;
+    background-color: grey;
+}
+.bottomllinebutton{
+    background: black;
+    margin-top: 26px;
+    margin-left: 18px;
+    padding: 1%;
+    color: white;
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speech to Text</title>
+  <style>
+    /* Reset Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fullscreen Flexbox Layout */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(-45deg, #ff6a00, #ffcc00, #ff0066, #00bcd4);
+      background-size: 400% 400%;
+      animation: gradientAnimation 15s ease infinite;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      overflow-x: hidden;
+      color: #fff;
+    }
+
+    /* Keyframes for moving gradient animation */
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* Centered container for content */
+    .content {
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    #recordBtn {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+      background-color: #ff5e57;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 20px;
+      animation: bounceIn 1.5s ease-out;
+      box-shadow: 0 0 20px rgba(255, 94, 87, 0.6);
+      transition: all 0.3s ease-in-out;
+    }
+
+    #recordBtn:hover {
+      background-color: #ff3a2e;
+      transform: scale(1.1);
+    }
+
+    #recordBtn.active {
+      animation: pulsate 1.5s infinite ease-in-out;
+    }
+
+    #textOutput {
+      margin: 20px auto;
+      padding: 15px;
+      width: 80%;
+      max-width: 500px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+      font-size: 1.2rem;
+      word-wrap: break-word;
+      color: #fff;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    #textOutput.active {
+      border-color: #57ff57;
+      box-shadow: 0 0 15px #57ff57;
+      transition: all 0.5s ease-in-out;
+    }
+
+    h2 {
+      margin-top: 30px;
+      font-size: 1.8rem;
+      color: #fff;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    #historyList {
+      list-style: none;
+      padding: 0;
+      margin: 20px auto;
+      max-width: 500px;
+      text-align: left;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+      padding: 15px;
+      animation: slideIn 1.5s ease-out;
+    }
+
+    #historyList li {
+      padding: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    #historyList li:last-child {
+      border-bottom: none;
+    }
+
+    #clearHistoryBtn {
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #ff5e57;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 10px;
+      animation: fadeInUp 1.5s ease-out;
+      box-shadow: 0 0 10px rgba(255, 94, 87, 0.6);
+    }
+
+    #clearHistoryBtn:hover {
+      background-color: #ff3a2e;
+      transform: scale(1.1);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounceIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+      70% {
+        transform: scale(0.95);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes pulsate {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(255, 94, 87, 0.6);
+      }
+      50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 30px rgba(255, 94, 87, 0.9);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(255, 94, 87, 0.6);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Speech to Text</h1>
+    <button id="recordBtn">Start Recording</button>
+    <div id="textOutput">Transcribed text will appear here...</div>
+
+    <h2>History</h2>
+    <ul id="historyList"></ul>
+    <button id="clearHistoryBtn">Clear History</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

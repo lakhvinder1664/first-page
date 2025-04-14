@@ -1,0 +1,37 @@
+.main{
+
+}
+.top-header{
+
+}
+.container{
+    width: 1366px;
+    margin: auto;
+    background-color: #ddd;
+}
+.left-side{
+    width: 450px;
+    float: left;
+}
+
+.des{
+    text-align: center;
+}
+.des h2{
+   
+}
+.des p{
+    text-align: center;
+}
+.desp img{
+
+}
+
+.right-side{
+    width: 500px;
+    float: left;
+    background:red;
+}
+.clear{
+    clear: both;
+}

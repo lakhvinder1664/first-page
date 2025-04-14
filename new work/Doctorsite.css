@@ -1,0 +1,388 @@
+*{
+   
+    margin: 0%;
+    padding: 0%;
+}
+ .navheadingfirst {
+     margin-left: 125px;
+ }
+
+ .text {
+    float: right;
+    margin-right: 51px;
+     justify-content: space-between;
+ }
+
+ .navheadingfirstsecondline a {
+    color: black;
+    margin: 10px;
+    text-decoration: none;
+
+ }
+
+ .navheadingfirstsecondline {
+     padding: 17px
+ }
+
+ .navupper {
+     margin: -10px;
+     border-top: 2px solid black;
+     border-bottom: 1px solid black;
+     margin-top: 90px;
+ }
+
+ .navbartext {
+    padding-left: 224px;
+    width: 850px;
+    float: left;
+    margin-top: 42px;
+ }
+
+ .navbartext a {
+     text-decoration: none;
+     color: black;
+     margin-left: 50px;
+     
+    }
+    
+.navbartext button {
+    background: #3980c6;
+    margin-left: 102px;
+    border: none;
+}
+
+ .container {
+     margin-top: 38px;
+     width: 1366px;
+     margin: auto;
+ }
+ 
+.navbartext button p{
+    padding: 5px;
+    color: white;
+    font-size: large;
+    background: #3a96f1;
+    margin: -21px;
+}
+
+ .MediplusPicture img {
+    padding-left: 158px;
+    width: 125%;
+ }
+
+ .MediplusPicture {
+     margin-top: 32px;
+     width: 150px;
+     float: left;
+
+ }
+
+ .clear {
+     clear: both;
+ }
+/* 
+.ban img{
+    margin: -8px;
+    padding-left: 0px;
+    width: 1513px;
+    float: left;
+    margin-top: 25px;
+}
+.bannercontent{
+    position: relative;
+    width: 78%;
+    
+}
+.bannercontent h3, p{
+ position: absolute;
+ margin-top: 0%;
+}
+.bannercontent h3{
+    margin-left: 64px;
+    margin-top: 19%;
+    font-size: 336%;
+}
+
+.banner p{
+    margin-top: -486px;
+    padding: 68px;
+    font-size: 89%;
+}
+.bannercontent span{
+    color: #3980c6;
+}
+ */
+/* .GetAppointmen{
+    position: absolute;
+    margin-top: -326px;
+}
+.LearnMore{
+position: absolute;
+margin-top: -326px;
+} */
+
+.banner{
+    background-image: url(images/slider.jpg);
+    background-size: cover;
+    height: 777px;
+    margin-top: 4%;
+}
+.banner span{
+    color: #3980c6;
+}
+
+.bannerContent{
+    width: 100%;
+}
+.bannerContent h3{
+    padding-top: 177px;
+    margin-left: 128px;
+    font-size: 68px;
+}
+.banner p{
+    margin-top: 22px;
+    padding-left: 133px;
+    font-size: 80%;
+}
+.bannerbutton{
+    margin-top: 35px;
+    margin-left: 132px;
+
+}
+.GetAppointment{
+    color: white;
+    background: #3a96f1;
+    border: none;
+    padding: 15px;
+    margin-right: 20px;
+}
+.LearnMore{
+    color: white;
+    background: #3a96f1;
+    border: none;
+    padding: 15px;
+}
+.ThreeCards{
+   
+    transform: translateY(-23%);
+    margin-left: 95px;
+    width: 1140px;
+    display: flex;
+}
+.CardOne{
+    line-height: 24px;
+    border-radius: 10px;
+    padding: 31px;
+    color: white;
+    width: 350px;
+    background: #3980c6;
+}
+
+
+.CardTwo{
+    line-height: 24px;
+    margin-right: 50px;
+    margin-left: 50px;
+    border-radius: 10px;
+    padding: 31px;
+    color: white;
+    width: 350px;
+    background: #3980c6;
+}
+
+
+.CardThree{
+    line-height: 24px;
+    border-radius: 10px;
+    padding: 31px;
+    color: white;
+    width: 350px;
+    background: #3980c6;
+}
+.CardThree a{
+    line-height: 0px;
+}
+.firstTextSecondImage{
+    text-align: center;
+}
+.circleBackgroundOne{
+    text-align: center;
+}
+.circleContainer{
+    justify-content: center;
+    display: flex;
+}
+.Circlefirst{
+    margin: 3px;
+}
+.circleImgAndText{
+    margin-top: -84px;
+    width: fit-content;
+    padding: 92px;
+}
+.blueBackground{
+    z-index: 0;
+    position: relative;
+    width: 100%;
+    background-image: url(images/blockqoute-bg.jpg);
+    background-size: cover;
+}
+.blueBackground::before{
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    content: "";
+    position: absolute;
+    background: #3980c6bf;
+    z-index: -1;
+}
+.blueBackgroundImgAndText{
+    color: white;
+    margin-top: 98px;
+    font-size: 47px;
+    padding: 91px;
+    display: flex;
+    justify-content: center;
+}
+.containerfirstTextSecondImage{
+ display: flex;  
+}
+.leftText{
+    padding-left: 129px;
+}
+.Rightvideo{
+    width: 88px;
+    background-image: url();
+    background-repeat: no-repeat;
+    float: right;
+}
+.smallPointsBackground{
+    color: grey;
+    justify-content: stretch;
+    margin-top: 10px;
+    display: flex;
+}
+.Rightvideo img{
+    width: 611px;
+    margin-left: -27px;
+    width: 353px;
+}
+.blueBackgroundTwo{
+    line-height: 2;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-size: cover;
+    background-image: url(images/call-bg.jpg);
+}
+.blueBackgroundTwo::before{
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    content: "";
+    position: absolute;
+    background: #3980c6bf;
+}
+.blueBackgroundImgAndTextTwoButton{
+    margin-top: 15px;
+    justify-content: center;
+    gap: 20px;
+    display: flex;
+}
+.blueBackgroundImgAndTextTwoButton .leftbutton{
+    color: rgb(20, 19, 19);
+    font-size: medium;
+    padding: 10px 20px;
+    border: none;
+    background-color: #2a84debf;
+    transition: transform 0.5s ease;
+}
+
+.blueBackgroundImgAndTextTwoButton .leftbutton:hover{
+    background: white;
+    transform: scale(0.8);
+    opacity: 0.8;
+}
+.FoursplitimageText{
+    text-align: center;
+}
+.Foursplitimage{
+    height: 273px;
+    width: auto;
+    margin-left: -42px;
+    margin-right: -61px;
+    display: flex;
+    justify-content: space-between;
+}
+.threeCenterBlueCardsText{
+    text-align: center;
+}
+.ThreeCardsBackground{
+    display: flex;
+}
+.ThreeCardsBackgroundCardOne{
+    width: 270px;
+    background-color: white;
+    border: 1px solid grey;
+}
+.cardcontainer{
+    text-align: justify;
+    width: 100%;
+    height: 100vh;
+    border: gold;
+}
+.bottomthreecards{
+    margin-left: 11%;
+    justify-content: space-evenly;
+    display: flex;
+    width: 76%;
+    height: 100vh;
+    background-color: rgb(255 255 255);
+}
+.firstcard{
+    width: 32%;
+    border: 2px solid greenyellow;
+}
+.firstcardtext{
+    text-align: center;
+    font-size: 29px;
+}
+.firstcardtext i{
+    font-size: 68px;
+}
+.firstcardtext h5 p{
+    font-size: 40px;
+}
+.unorderlist ul li {
+    
+    font-size: 17px;
+    padding: 4px;
+    justify-content: space-around;
+    display: flex;
+}
+.unorderlist{
+    font-size: 15px;
+    margin-top: 84px;
+}
+.unorderlist ul li i{
+    font-size: 169%;
+}
+.secondcard{
+    width: 32%;
+    border: 2px solid greenyellow;;
+}
+.thirdcard{
+    width: 32%;
+    border: 2px solid greenyellow;;
+}
+.cardbutton{
+    text-align: center;
+    line-height: 3;
+}
+.cardbutton button{
+    padding: 4px;
+}
