@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Interactive Portfolio</title>
+  <link rel="stylesheet" href="meena.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <!-- Loading Animation -->
+  <div class="loader">
+    <div class="loader-spinner"></div> <!-- Optional spinner -->
+    <p>Loading...</p> <!-- Optional text -->
+  </div>
+  <header>
+    <div class="logo">MyPortfolio</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="toggleMode">🌙</button>
+  </header>
+
+  <section id="home" class="hero">
+    <canvas id="stars"></canvas>
+    <div class="hero-content">
+      <h1>Hey, I'm a Web Developer</h1>
+      <p>I design and build modern web experiences.</p>
+      <a href="#contact" class="btn">Hire Me</a>
+    </div>
+  </section>
+  
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a front-end developer with a passion for building beautiful and responsive websites. I love learning new technologies and creating user-focused digital products.
+    </p>
+  </section>
+  <section id="experience" class="experience">
+    <h2>Experience </h2>
+    <a href="Your_Resume_Link_Here.pdf" class="btn download-resume" target="_blank">Download Resume</a>
+    <div class="experience-item">
+      <div class="experience-content">
+        <h3>Off-Page SEO Intern</h3>
+        <h4>Vishyat Technologies</h4>
+        <p><strong>Duration:</strong> 3 Months</p>
+        <p>
+          Worked on boosting search engine rankings using strategies like backlinking, directory submissions, and social bookmarking. Improved website visibility and assisted the SEO team in executing digital campaigns.
+        </p>
+      </div>
+    </div>
+    <div class="glow-background"></div>
+  </section>
+  
+
+  <section id="skills" class="skills">
+    <h2>My Skills</h2>
+    <div class="skill">
+      <p>HTML</p>
+      <div class="skill-bar"><div class="fill" style="width: 95%"></div></div>
+    </div>
+    <div class="skill">
+      <p>CSS</p>
+      <div class="skill-bar"><div class="fill" style="width: 90%"></div></div>
+    </div>
+    <div class="skill">
+      <p>JavaScript</p>
+      <div class="skill-bar"><div class="fill" style="width: 85%"></div></div>
+    </div>
+  </section>
+  
+  <section id="tech-stack" class="tech-stack">
+    <h2>Tech Stack</h2>
+    <div class="icons">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+    </div>
+  </section>
+  
+  <section id="github-stats" class="github">
+    <h2>GitHub Stats</h2>
+    <img src="https://github-readme-stats.vercel.app/api?username=your-username&show_icons=true&theme=dark" alt="GitHub Stats" />
+  </section>
+  
+
+  <!-- Add after 'About' section -->
+<section id="projects" class="projects">
+  <h2>Projects</h2>
+  <div class="project-list">
+    <div class="project-card">
+      <h3>Sonica Music App</h3>
+      <p>A Spotify-like music player with login, profile, and playback features.</p>
+      <a href="https://github.com/yourusername/sonica" target="_blank">View on GitHub</a>
+    </div>
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>This interactive portfolio with dark mode and animated stars background.</p>
+      <a href="#" target="_blank">You’re viewing it 😉</a>
+    </div>
+    <div class="project-card">
+      <h3>Figma Designs</h3>
+      <p>Landing pages and dummy apps for my YouTube channel ‘Eldest Creek’.</p>
+      <a href="https://youtube.com/@EldestCreek" target="_blank">Check on YouTube</a>
+    </div>
+  </div>
+</section>
+
+<!-- Add after 'Contact' section -->
+<section id="socials" class="socials">
+  <h2>Connect With Me</h2>
+  <div class="social-icons">
+    <a href="https://github.com/lakhvinder1664" target="_blank" aria-label="GitHub">
+      <i class='bx bxl-github bx-tada' ></i>
+    </a>
+    <a href="https://www.linkedin.com/in/lakhvinder-singh-6055362b8" target="_blank" aria-label="LinkedIn">
+      <i class='bx bxl-linkedin bx-tada'></i>
+    </a>
+    <a href="https://www.instagram.com/lakhvinder_1664" target="_blank" aria-label="Instagram">
+      <i class='bx bxl-instagram bx-tada'></i>
+    </a>
+    <a href="https://youtube.com/@eldestcreek" target="_blank" aria-label="YouTube">
+      <i class='bx bxl-youtube bx-tada'></i>
+    </a>
+  </div>
+</section>
+
+
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit" id="submitBtn">Send Message</button>
+    </form>
+    <p id="formMessage"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My Interactive Portfolio</p>
+  </footer>
+
+  <script src="meena.js"></script>
+</body>
+</html>
