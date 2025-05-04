@@ -3,248 +3,341 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Design Experiments 1-14</title>
+    <title>Web Design Experiments - I.K. Gujral PTU</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 20px;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
         }
         .experiment {
+            background: white;
             border: 1px solid #ddd;
+            border-radius: 5px;
             padding: 15px;
             margin-bottom: 20px;
-            border-radius: 5px;
+        }
+        h1, h2 {
+            color: #2c3e50;
         }
         table {
-            border-collapse: collapse;
             width: 100%;
+            border-collapse: collapse;
             margin: 10px 0;
         }
         table, th, td {
-            text-align: center;
-            border: 1px solid black;
+            border: 1px solid #ddd;
         }
-        .highlight {
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        .important {
             background-color: yellow;
         }
-        .split-container {
+        .split {
             display: flex;
         }
-        .pane {
+        .left, .right {
             width: 50%;
             padding: 10px;
         }
+        .letterhead {
+            text-align: center;
+            border: 2px solid #000;
+            padding: 20px;
+            margin: 10px 0;
+        }
+        .header {
+            background-color: #0066cc;
+            color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
         iframe {
             width: 100%;
-            height: 200px;
-            border: 1px solid #ccc;
+            height: 300px;
+            border: 1px solid #ddd;
         }
     </style>
 </head>
 <body>
 
-<!-- Experiment 1: Basic HTML Tags -->
-<div class="experiment" id="exp1">
-    <h2>1. Basic HTML Tags</h2>
-    <h1>Main Heading</h1>
-    <p>This paragraph contains <b>bold</b>, <i>italic</i>, and <u>underlined</u> text.</p>
-    <ul>
-        <li>Unordered list item</li>
-    </ul>
-    <ol>
-        <li>Ordered list item</li>
-    </ol>
-</div>
+    <h1>Web Design Experiments</h1>
+    <p>Bachelor of Computer Applications (BCA) - I.K. Gujral Punjab Technical University</p>
 
-<!-- Experiment 2: Book Index Page -->
-<div class="experiment" id="exp2">
-    <h2>2. Book Index Page</h2>
-    <h1>Web Design Fundamentals</h1>
-    <h2>Table of Contents</h2>
-    <ul>
-        <li>Chapter 1: HTML Basics</li>
-        <li>Chapter 2: CSS Introduction</li>
-        <li>Chapter 3: JavaScript Essentials</li>
-    </ul>
-</div>
-
-<!-- Experiment 3: College Letterhead -->
-<div class="experiment" id="exp3">
-    <h2>3. College Letterhead</h2>
-    <div style="text-align: center; border: 2px solid #000; padding: 20px;">
-        <h1>I.K. Gujral Punjab Technical University</h1>
-        <p>Department of Computer Applications</p>
-        <p>Jalandhar, Punjab - 144603</p>
+    <!-- Experiment 1: Simple HTML Page -->
+    <div class="experiment" id="exp1">
+        <h2>1. Simple HTML Page with Different Tags</h2>
+        <h3>This is a heading (h3)</h3>
+        <p>This is a paragraph with <strong>bold</strong>, <em>italic</em>, and <u>underlined</u> text.</p>
+        <ul>
+            <li>Unordered List Item 1</li>
+            <li>Unordered List Item 2</li>
+        </ul>
+        <ol>
+            <li>Ordered List Item 1</li>
+            <li>Ordered List Item 2</li>
+        </ol>
+        <img src="https://imgs.search.brave.com/1Fz1NsbrfqZ3uxFRwNuv56URqsezxMNyvqKjTtRa3nU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTU5/MTU3MjUwNC9waG90/by9jaGVlcmZ1bC1i/dXNpbmVzc3dvbWVu/LXNoYWtpbmctaGFu/ZHMtaW4tbWVldGlu/Zy1yb29tLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1tbzVW/alZ5QS10NHlkUzZa/akpWeGFVU2kwdjlL/VmJKVl9HbzVFT0Zf/QjhNPQ" alt="Sample Image">
     </div>
-</div>
 
-<!-- Experiment 4: Internal Page Navigation -->
-<div class="experiment" id="exp4">
-    <h2>4. Internal Navigation</h2>
-    <p>Jump to:</p>
-    <ul>
-        <li><a href="#exp1">Experiment 1</a></li>
-        <li><a href="#exp2">Experiment 2</a></li>
-        <li><a href="#exp3">Experiment 3</a></li>
-    </ul>
-</div>
+    <!-- Experiment 2: Book Index Page -->
+    <div class="experiment" id="exp2">
+        <h2>2. Book Index Page (Web Designing)</h2>
+        <h1>Web Designing: A Beginner's Guide</h1>
+        <ul>
+            <li>Chapter 1: HTML Basics</li>
+            <li>Chapter 2: CSS Styling</li>
+            <li>Chapter 3: JavaScript Fundamentals</li>
+        </ul>
+    </div>
 
-<!-- Experiment 5: Text Formatting -->
-<div class="experiment" id="exp5">
-    <h2>5. Text Formatting</h2>
-    <p><strong>Strong text</strong>, <em>emphasized text</em>, <mark>highlighted text</mark>, 
-    <small>small text</small>, <del>deleted text</del>, <ins>inserted text</ins>, 
-    H<sub>2</sub>O, x<sup>2</sup></p>
-</div>
+    <!-- Experiment 3: College Letterhead -->
+    <div class="experiment" id="exp3">
+        <h2>3. College Letterhead</h2>
+        <div class="letterhead">
+            <h1>IK Gujral Punjab Technical University</h1>
+            <p>Department of Computer Applications</p>
+            <p>Jalandhar, Punjab</p>
+        </div>
+    </div>
 
-<!-- Experiment 6: Timetable -->
-<div class="experiment" id="exp6">
-    <h2>6. Department Timetable</h2>
-    <table>
-        <tr>
-            <th>Time</th>
-            <th>Monday</th>
-            <th>Wednesday</th>
-        </tr>
-        <tr>
-            <td>9:00-10:00</td>
-            <td class="highlight">Web Design</td>
-            <td>Programming</td>
-        </tr>
-        <tr>
-            <td>10:00-11:00</td>
-            <td>Database</td>
-            <td class="highlight">Web Design Lab</td>
-        </tr>
-    </table>
-</div>
+    <!-- Experiment 4: Internal Page Navigation -->
+    <div class="experiment" id="exp4">
+        <h2>4. Internal Page Navigation</h2>
+        <p>Jump to:</p>
+        <ul>
+            <li><a href="#exp1">Experiment 1</a></li>
+            <li><a href="#exp2">Experiment 2</a></li>
+            <li><a href="#exp3">Experiment 3</a></li>
+        </ul>
+    </div>
 
-<!-- Experiment 7: Table Layout -->
-<div class="experiment" id="exp7">
-    <h2>7. Table Layout</h2>
-    <table>
-        <tr>
-            <td style="width: 30%; vertical-align: top;">
-                <h3>Navigation</h3>
+    <!-- Experiment 5: Text Formatting -->
+    <div class="experiment" id="exp5">
+        <h2>5. Text Formatting</h2>
+        <p><b>Bold</b>, <i>Italic</i>, <mark>Highlighted</mark>, <del>Deleted</del>, <sup>Superscript</sup>, <sub>Subscript</sub></p>
+        <p><code>Code: console.log("Hello");</code></p>
+    </div>
+
+    <!-- Experiment 6: Department Timetable -->
+    <div class="experiment" id="exp6">
+        <h2>6. Department Timetable</h2>
+        <table>
+            <tr>
+                <th>Time</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+            </tr>
+            <tr>
+                <td>9:00 AM</td>
+                <td class="important">Web Design (Lab)</td>
+                <td>Programming in C</td>
+            </tr>
+            <tr>
+                <td>10:00 AM</td>
+                <td>Mathematics</td>
+                <td class="important">Database Systems</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Experiment 7: Table Layout -->
+    <div class="experiment" id="exp7">
+        <h2>7. Table Layout</h2>
+        <table>
+            <tr>
+                <td style="width: 30%; vertical-align: top;">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="#exp1">Exp 1</a></li>
+                        <li><a href="#exp2">Exp 2</a></li>
+                    </ul>
+                </td>
+                <td style="width: 70%;">
+                    <h3>Main Content</h3>
+                    <p>This is a webpage layout created using tables.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Experiment 8: Audio & Video -->
+    <div class="experiment" id="exp8">
+        <h2>8. Audio & Video Embedding</h2>
+        <h3>Audio:</h3>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>
+        <h3>Video:</h3>
+        <video controls width="300">
+            <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+            Your browser does not support video.
+        </video>
+    </div>
+
+    <!-- Experiment 9: Split Layout -->
+    <div class="experiment" id="exp9">
+        <h2>9. Split Layout with Logos</h2>
+        <div class="split">
+            <div class="left">
+                <img src="https://vjes.org/images/logo.png" alt="College Logo">
+            </div>
+            <div class="right">
+                <img src="data:image/gif;base64,R0lGODlhVwBmAHAAACH5BAEAAP8ALAAAAABXAGYAhwAAAO8ZISkxlPcZISkxhO8pMe86SuYZKffvADExlPelpe+EhO9aUiEplEIZGUJSGUJChO+MnO/FxdbOEBBaUhBaGd7vhJRSe5zOjJTO3ghSjN7mCLWtIealjObFrZStGfdja62MGbUZe+YQeylKjISEUkJahIyMGe8QSggQjCkZ5mtSvSlSvWsZvZRjGQgZ5kpSvQhSvUoZvZRCGZQIGd7vrUIphObm7/cZEGNjUlJ7WsUIGe+U7++tUmulWr2llO8Z760Z75SllO8Zxa0ZxZRSnJzOrZTv3mvO3mvOWmuE3pTvUimEWinO3inOWimE3muEGa2UzmvOnGvOGWuEnCmEGSnOnCnOGSmEnN7FjLVSe5zvjLXO3s6U786tUkqlWr2ElM4Z74wZ75SElM4ZxYwZxUrO3krOWkqE3pTOUgiEWgjO3gjOWgiE3kqEGYyUzkrOnErOGUqEnAiEGQjOnAjOGQiEnL0ISq2lUubWCO+cxXN7WqWEUoylUt7OMebmzmNChObF5mNCUubvMb1jSr1CStZalBApQhApCObvY+9SKQgZtWshUikZtZQhSu8pGWsIUu9a72tS7ylS761a77UZnGsZ78VjGWshGe9axa1axYwZnOYQnJTvGe+MGeYxe+bOY+9aCM5a70pS7whS74xa70oZ78VCGc5axYxaxZTOGc6MGWsIjGtCGUJCUkIIUmNahPcZKb0hSrXOGd5aa86tGe+EUmvv3mvvWmul3rXvUimlWrVSnCnv3invWiml3pzvrbXv3mulGa2U72vvnGvvGWulnCmlGSnvnCnvGSmlnGMhhM6Uxc6EUkrv3krvWkql3rXOUgilWgjv3gjvWgil3kqlGYyU70rvnErvGUqlnAilGQjvnAjvGQilnJQpGRAIIYxjSowISpRCSsUhGSEZhO9alCEZlIwZc+YxnO+tGbXvGUIIjBAIUhApYxApKWsAEGtjGUJjUkIpUvcIEPfvCOYIEN6lpd4ZIeYZCDExhBAxexAxlBkIAAAIAAAAAAj/AP8JHEiwoMGDCAsGWBigQICEECNKnEjR4MICBQw4ZMhxAMaKIEOK/OdwAMMCERZs5HhAUYEBMB+OnEkTpkmODRcs0IixZ4EFEXB0HECz6ESbHDEaCGBggQKdEZ6C0LlAD4OVC20a3Uqw4c2GTRdkAdEQhASdCiSAYKAgpYSUC0AsvZiVa9GbO5mC6KAgrZ6lPyMYeCrhp1oQU/sqmDqXIUy7IU2WXMAg6uIIbCUwCMDWwIC+auNOBREhggQDDCRIUNDYK+SjXxeCWMwg7s60CnKyNjAa8dQFq1l7WC2XaYFHWYm+RhiToQHBmP+8LYAj7EWHj4ReRMEg1uAIsyN0/zhe4A/rjTBjLS/4NaNDzFTjbsZhTztLhjgeIc/Pe605h6SZpRJO6/0TS3tOGfBIAU8J1h0KOCWF0wE44VCAXNU1aBtZDHim3GsNLfTcH4LJplMsLyF30gH4HEDOHfjIQo4sBxyA1ULa4RPVabPpMdsCQi33FVtprTZXcyfhc4cjjACyzDI22OAkIPOg44gssuATIWK2lbaXjwxBhh9pi3WgE1k4tSgLI8sk4KYAcApAgAD8xClAOU46cgeFDUXVIWU7ORUBR1x9BYIHgepkQGsBkIMOIAnASUACk8IZqQBvxjmnPoAwkuUAUznUn058RUDdQkZ9NZiABXiHFT6P2v/QgJyYYqqPAPo0oOusl745p5uMFMLRgoi5FYipyc00ZCCK6JESCDjEJosNc8rpZqWRzroHHyUA0kA5lEZaKaYJ6IMOToqgkJZTOiUlUiwL4TOYVH0twJIgcYpLrpuRQsBBPfUgkEcJJJCLraUNkGCDLBzhAJxKYfEpE0g3NQUCLYHsxpEs3tIa6bXiNgCBH/XMsgceG+TBR7jigizArPo4whFqBahm2pkBfHjURaOdxQC08cqSawP8smxpAhCcUA8eCegKwQQb7FErppMS/Saw5OCIw4+EtfWSehNxJCCXBtjniA246rtrAo1UuscgeOTqZgOw+DEBBOS2TbTV2C7/Q6Goetj2FHoUOaeAs4tptNABZxvMLwQ5wAIL3iJzMEEO4GZawsB3kgCBCZLb0PTHbgKSdc6KjFaVvahKxFFtCpip003TTt1vH7VMMAEHHJQAy+Z9XD0n3bP4AcsevNu9+x4kXO0mOnweUJtlrKnoelJO1btQ7eTC6S8CfnAQDQcbgJ8yLG0bXQ4fG0zgxwbh847AICXw2vSkjPA5QFMK1AZkmAmJEFg6tJQD2EAf16LaHvLAAVg0DwIQ2MMEAMaBPdivAfoogR8ExoEcNA9pC7wbyCJlA2EdYH9nMsBfCkAhiAgwOUJBR/OORoBGcGAQOcCU/XIgsHrkoQ9Dg8W//8q3AQg0IlMNwAMCctCASX0Mg/oLiwRIBJSJHYQpBuiAAfBxobngQBa/wla54Dc6kOHBD5HbQD1qcTw1NvAD9YCFpaq2QD7UimUJsMFCHjGYRcVCe1YkyADORKICcHEjBbjVr1hGAsuVa4S6w5sNooGASuZhD02DxQ+byC+6bYAP9qsVAh1xE4wQKSg5Q0hDUGIaEjXGEXz7mBPDh7ejmYCBcPJkJTlAgiMCYgO1mBWccrVAqbmsVn67iKI84hiLMAQtpXGIi9DWPZYlcQOwsFo5GrEHBASPBDmohfnq0UAbkECco+NVCRCQTTshkFICkFnOFqWikzgzK7FQFHIGgP+OBFLtWg3Y3B7SBwEhrrEPN6zkIMpXMg6gDAF7gIDoiEY+vL3TYyTkU1PgRSCFdOQlOYLUrxB4NE82MAcInUAeKslS5eVug5UMGPx6F7nw8euOpEuAIxyCkVXSYjOtG0i84tXThTgCXFOzVbZG1j41boCSedjgwCYHOtD9Kw+1qAf8Jvg+bxINqbIMFyC01JDUgId1BehKRuJCHQYANQCQgqfzdCXEPPgQD5GzwQTtWoJblUNXdzKBEgdRjxCQ4HccsGQf8CZLS8lpYTwzzWw2QpAL4WYBn1BcAKZ1q3BZi6Ips5sfTJArCMQUk3YaFwRmUUk8tE0Ae6iH3cCXg9f/HjNmDKnNWUrUEKFeCDzTW0qMROdEJ4oMD+Rk3jpL0LRberNoOcBD7yDVABOIcwLeIx8sErDODZRgUousGiAohANaICYWa8mZTG6iiHU1RDuMOBq5yvE9DgigEXTTHaQSWwt+NRJgAJuADhJwDlggoB45SEAf6sHcv8JCpZj82HyXIQuhMKhIO3GIQDbynNVUsUVx/ZWlNheNlsGWgQsmJ9EyWI9E1OAGNSAnpJ6mVQ1OABbGNUH7snnbLIEFBNKBC9ie+RSgqGhamQtX5fJggqtVLmAAC14CADGLQdzgyjewAA5FBuCVSu2fCeDDwFrWK0do6Sfs2sljSCKbxTjE/0I4KITo4EkuE/jBD7Ia4dsQ8C8ONKAROfCDBbB8gz8MYmUJcN8EEDALb1UtUgYGYizLNV4RrYU0K/mHMp81F3yI451PRJruSEDS0eFhpRsMXjkenAhCx5i5EFCjXbfspls1ILZ8uKikGsCIlcCFNSfJ7eoWQKEDFCJTTixXH8actgbkQHcw9TOu/DCIP2A5EX6I8ATXSEuQ+WsCEQbvm5ZB1tQk5q0rGQxxFgcJ5+HqZQ/OQzaJNslL/vK5RFvgICxQA8LGjct8hkAfIHpEDC44bo7NFCAYxpRnYUaAwHmKggJwAHQM07P6QGBsP9m0HOQBDyQggIHlnTkNAhgPeP8jAB/AZ8RA3y1htcAqY13WtHkw/CdFnstKLkQazzBkHNVMJ6QX3bto5CHB5TBBJdG4iFuZoAR7wDGmFsjnJupj2SVYNjlricDwCoDCQlldX97aMBzYh+LxtVayAQoB5FaSje9cKQJuXDX8RkofsT0wBxaBKzHHtAT3rVRxL2UDsg6GL1Yhq0O0RNYk9XNfYaw1XctXyQ3goQQTnGADwbU37rqRnAhVY2vZ5jGc1gqyATA7PexhAI5SXIASG4eJR0g0OenDD7VAqB/semDKT6APfSjBCfhwaoGJPg+DmAAeFnwC28oVzA0wXYTOrulg4+SoN3XsvhKwB+/qChB70CD/AuAXMJaWf37b7t3kMBg+E2A0qfD0m40Wh5W0Lo4xAdAShWRxNaXWqmrLNm+70k19AAvRtXSo1geRM0Ek8FUGJ29W01nWMjX54xxsFSIPIRsScAPIwhC1039GkyscMFrvNCkG1nx9N371cDl/9jR+kGRuwkMDNS6d5VkCgA6NFwGFhiYysRAMYG0KIE0NQQ5tonaNxS+RFIEi4z4N2AA6AGUcAAh3AgsbwAFHxDJUCEokZStUs2LjwBEKcAOBgCbKsRDoBWwcQQ6AgFROdEdOtDtF0zQ2gHuTwz4fRzKz4EDrhGPYcmub5DjbJwCoJyLgUUob5hgRwjhGkwCZYz8j/5hNYQRbVZhY4IYrC4YAeAA1chQuNdRNJdAIclJDnIhMWdN40dJMAsFM+TdUOTMtZCYAJLCG4TJwfQWKuhJmMdUHjlYudVNJE2ACuoJfSyhvBFBDJsBEsSQAvbYR9bSKaSUQOMFH5rU4y2A1H6MPHJCH5WICKlVBsBAOfbBo4GNBc6QrV8dSHMAHUSdB5JQrJMAH2ihXbiJPByBxLGRPqWhpUaFF8cIIvjI3dcNAsIB3XRVTv6dEFpRTGccBKkM+59d+EMAHi9ZX1jgpy0AO8GIWqiFxQQWNP9EBIHAqWTEtybY3eYeJkQOOwDc5BEBlfgABRFMtCaBJfcACINQHl/+3juLIATCZKZjSawsBFAoQCB7wcDpTfR1iD0yRF/kXYm8CLv/iiwrIiLtiiZd0UUhDPjkgNw1wDkkHjwd2YJtYayTEcOqGG7nRW13RENwBHGdREndQaqDmXCz1cTkwUeUCAbWAQ03zgCujTccjjiwlaeWSL+Tmg5axGlcRSNC4NR6QMZSxEfggCI1wK+RyK+vEUgrVQAQQkwvkByVQUCOYh+YocCqlmeCDQBJYLvpQYX2iAH+gB30BIYxJEvjAFipxdptlNMkmmJpZhXKUb3kQVUQ3b4BgcqhZSUw0eD+5OKmhGh5GWc6EEgWglM/BOgGQdslWQwaWnJbUQJhSV7//B5MQgHne2VrwNyeoxyCrERwMsGZXxBR9YjPIwUIS5ivneJ7jxwHuVyuNQALmqZ9MBoO1Ik9LGRx9cRMBlHogEAhq4SfkxX/g1T02kFj6uUtN9o6+mZwAs1388isNsAyG46DtiSYREZSKUS8boYhz9DHgFI4Ac57yZqHeKVveOCeLBCcXeRMaqRrmoaAuFJQS4AFP0SEb4SgJlzducjwjeH4s9WDJOQgOlQMQ0JdWIymCyHBlIQF6EBw+Fzac4WFNcRYMUQjLYJlvgkCzsk0tuQd9QDIsxY0tRVMksE06dJ+24mNL6VZ+sQBAeqIBgF5v4ReFgSP4sAwt+qEJ1Ajl/xBoT2qh9RA8f1aYNTgplmkDZkZktDE4JlERZggaG8lbm8UIEuh1kpKflQQLrOWLkFKCCUd4OxUvs7GRTgECklER8LI/ihEBevAHA7I4/mg7igpbTgoL4sRSKGctZFkrIaqnQSmb0LkAHBUSJTGr7akAB6AdDoEOMlkt5PI0qAmlmlk/PikpjSAIWio2feEjPveMFKMbG2kSxVGmiGopWzhwqGkCNGpJTRaTl0IAZjYkiNQBZ1E2akmtOTNIshkAj9Cg2MoR+NA4BtOSnwMIJmACEKAPNnCxoPM5ogNWCeApSQECgWOGkmUSRwkSzuEBZWMWffFwjoEPjCA63dOVt/9oNURzDudgjvyiD55yQhXTF8PBABaSEbdaFDlTHajxsqZRsAxxALFADo4AJW4Cg3PTSdfYKbJAm6lXAJUxOFFxABjSkTWRsBnmFFOkFhgYC7HAIrLgCE5yQD1rjVKyDMFyB3t0HaZRZCGpE25FtndBFy6rGlbxM5rFsIszI4UgDujACOgwDlbiCFfSeNgThm8BHpgxALQQIsshNsFxFrHwFohCC7EBe2QFE7pZFm0Bm0/RFnGhXh6xHjcRC7oVGk27GhhhI6n7QidRGTrhARp5OGNHOAVCErnKP9AarUxBHLQgmQyBD0JBVtxRGn7hFlWBGzzorsVbfTAxuBs5F13/42FxYV6IYTE4t4FFohaswS6tsb3skRxTwaW5ORUpERUk6qPQOR20kL7tGRc+Ey0wob0i0Srk8RIvsUoIvGEoWx3AYasB4L9jl75DqQD7O3YD8LlnkRaoUTZAGmw85RE9sSBgcxADEC3N2FFCVcI4cCB90hmLIcFGghtLkaJG8p70AMBrybs4HBE3EiFXhCSIEb6giqCq4acPsxYg5REpy7uEUjg9DLhChROocSbQtKto4RndUcIxsaBPXJsQ0cPS+cWwOwBsiyKLkhFXgSIvgbIBDKg4wVMi8bzO68UWgR4JGy0AfBMxoWFg+npDdQAIy0VJAsUSwVNfcyBwHMcv//QIFHHAafK0AOS+CaEdFNIihoQTI0zCNoGyWZEUP7M/B6LFfMwV6LHJctHDzbHJKUsSPmEjBmAjGaF4UQEc7/kTOeMqzGQfZMy2GMHLgWoS+4QiMLEoF2EAXOoS19ET6eISPjESGwECOwggN2Avz2kqP8MUHeIbfOQbvKEIA4AsZlE2VYEjqfEHjVG82rEAN6AH3hwAG7k1Z6EZphEAUjGkZwFksckWcmHOjwCbZPEUFuYUJXuwnZszEWcvxmwatBs4muEUAfAs/dMWoFIYDFIaf5ARaTEoTmFhXYq7hLwVPIoYf7EA5hEIPxMc+ZQbz7IaY5ghGLGRgYAa0NnPrHfhVj4CFGFc0IHqzXKREoNBGX/RvRe9GLMhIPCMEW520TcjAbQAHEXJGwFshsULwgkbwCW8wX5qEgZAotbRFtXhASjCGqFrMaCyKEY6AI8gygQtyf+gxKqMul5bNoviEUtxxsaxP29t1QLM1hXxwXosQIgUu8UbEAA7" alt="University Logo">
+            </div>
+        </div>
+    </div>
+
+    <!-- Experiment 10: Student Bio-Data -->
+    <div class="experiment" id="exp10">
+        <h2>10. Student Bio-Data</h2>
+        <h3>Personal Information</h3>
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Course:</strong> BCA</p>
+        <p><strong>Roll No:</strong> 12345</p>
+        <h3>Educational Qualifications</h3>
+        <table>
+            <tr>
+                <th>Degree</th>
+                <th>Institution</th>
+                <th>Year</th>
+            </tr>
+            <tr>
+                <td>10th</td>
+                <td>ABC School</td>
+                <td>2018</td>
+            </tr>
+            <tr>
+                <td>12th</td>
+                <td>XYZ College</td>
+                <td>2020</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Experiment 11: Hospital Front Page -->
+    <div class="experiment" id="exp11">
+        <h2>11. Hospital Front Page</h2>
+        <div class="header">
+            <h1>City General Hospital</h1>
+        </div>
+        <div class="split">
+            <div class="left">
+                <h3>Departments</h3>
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
+                    <li>Cardiology</li>
+                    <li>Neurology</li>
+                    <li>Pediatrics</li>
                 </ul>
-            </td>
-            <td style="width: 70%;">
-                <h3>Main Content</h3>
-                <p>This layout is created using HTML tables.</p>
-            </td>
-        </tr>
-    </table>
-</div>
-
-<!-- Experiment 8: Audio & Video -->
-<div class="experiment" id="exp8">
-    <h2>8. Audio & Video</h2>
-    <h3>Audio:</h3>
-    <audio controls>
-        <source src="sample.mp3" type="audio/mpeg">
-        Your browser doesn't support audio.
-    </audio>
-    <h3>Video:</h3>
-    <video controls width="300">
-        <source src="sample.mp4" type="video/mp4">
-        Your browser doesn't support video.
-    </video>
-</div>
-
-<!-- Experiment 9: Split Layout -->
-<div class="experiment" id="exp9">
-    <h2>9. Split Layout</h2>
-    <div class="split-container">
-        <div class="pane" style="text-align: center;">
-            <h3>College Logo</h3>
-            <div style="height: 100px; background: #eee; line-height: 100px;">PTU Logo</div>
-        </div>
-        <div class="pane" style="text-align: center;">
-            <h3>University Logo</h3>
-            <div style="height: 100px; background: #ddd; line-height: 100px;">IKGPTU Logo</div>
+            </div>
+            <div class="right">
+                <h3>Emergency Contact</h3>
+                <p>Phone: 108</p>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- Experiment 10: Student Bio-Data -->
-<div class="experiment" id="exp10">
-    <h2>10. Student Bio-Data</h2>
-    <h3>Personal Information</h3>
-    <p><strong>Name:</strong> John Doe</p>
-    <p><strong>Roll No:</strong> BCA2023001</p>
-    <h3>Education</h3>
-    <table>
-        <tr>
-            <th>Degree</th>
-            <th>Institution</th>
-        </tr>
-        <tr>
-            <td>BCA</td>
-            <td>IKGPTU</td>
-        </tr>
-    </table>
-</div>
-
-<!-- Experiment 11: Hospital Front Page -->
-<div class="experiment" id="exp11">
-    <h2>11. Hospital Front Page</h2>
-    <div style="background: #0066cc; color: white; padding: 10px;">
-        <h1>City General Hospital</h1>
+    <!-- Experiment 12: Multiple Pages in One -->
+    <div class="experiment" id="exp12">
+        <h2>12. Multiple Pages in One</h2>
+        <iframe src="#exp1" name="frame1"></iframe>
+        <iframe src="#exp2" name="frame2"></iframe>
     </div>
-    <div class="split-container">
-        <div class="pane">
-            <h3>Emergency</h3>
-            <p>24/7 Emergency Services</p>
-        </div>
-        <div class="pane">
-            <h3>OPD</h3>
-            <p>9:00 AM - 5:00 PM</p>
+
+    <!-- Experiment 13: Login Form -->
+    <div class="experiment" id="exp13">
+        <h2>13. Login Form with Navigation</h2>
+        <form id="loginForm" onsubmit="return login()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br><br>
+            <button type="submit">Login</button>
+        </form>
+        <div id="profile" style="display: none;">
+            <h3>Welcome, <span id="userDisplay"></span>!</h3>
+            <p>This is your profile page.</p>
         </div>
     </div>
-</div>
 
-<!-- Experiment 12: Multiple Pages -->
-<div class="experiment" id="exp12">
-    <h2>12. Multiple Pages</h2>
-    <iframe src="#exp1" name="frame1" title="Experiment 1"></iframe>
-    <iframe src="#exp2" name="frame2" title="Experiment 2"></iframe>
-</div>
-
-<!-- Experiment 13: Login Form -->
-<div class="experiment" id="exp13">
-    <h2>13. Login Form</h2>
-    <form id="loginForm" onsubmit="event.preventDefault(); document.getElementById('loginSuccess').style.display='block';">
-        <label for="username">Username:</label>
-        <input type="text" id="username" required><br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" required><br><br>
-        <button type="submit">Login</button>
-    </form>
-    <div id="loginSuccess" style="display: none; color: green;">
-        <p>Login successful! Redirecting to profile...</p>
+    <!-- Experiment 14: Registration Form -->
+    <div class="experiment" id="exp14">
+        <h2>14. Registration Form</h2>
+        <form id="registerForm" onsubmit="return register()">
+            <label for="newUser">Username:</label>
+            <input type="text" id="newUser" required><br><br>
+            <label for="newPass">Password:</label>
+            <input type="password" id="newPass" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br><br>
+            <button type="submit">Register</button>
+        </form>
+        <div id="regSuccess" style="display: none; color: green;">
+            <p>Registration successful! Please login with your new credentials.</p>
+            <button onclick="document.getElementById('exp13').scrollIntoView()">Go to Login</button>
+        </div>
     </div>
-</div>
 
-<!-- Experiment 14: Registration Form -->
-<div class="experiment" id="exp14">
-    <h2>14. Registration Form</h2>
-    <form id="regForm" onsubmit="event.preventDefault(); document.getElementById('regSuccess').style.display='block';">
-        <label for="newUsername">Username:</label>
-        <input type="text" id="newUsername" required><br><br>
-        <label for="newPassword">Password:</label>
-        <input type="password" id="newPassword" required><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" required><br><br>
-        <button type="submit">Register</button>
-    </form>
-    <div id="regSuccess" style="display: none; color: green;">
-        <p>Registration successful! Please login.</p>
+    <!-- Experiment 15: Institute Website -->
+    <div class="experiment" id="exp15">
+        <h2>15. Institute Website with Validation</h2>
+        <div class="header">
+            <h1>IK Gujral Punjab Technical University</h1>
+            <p>Department of Computer Applications</p>
+        </div>
+        <div class="split">
+            <div class="left">
+                <h3>Contact Form</h3>
+                <form onsubmit="return validateContact()">
+                    <label for="contactName">Name:</label>
+                    <input type="text" id="contactName" required><br><br>
+                    <label for="contactEmail">Email:</label>
+                    <input type="email" id="contactEmail" required><br><br>
+                    <label for="message">Message:</label>
+                    <textarea id="message" required></textarea><br><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="right">
+                <h3>About Us</h3>
+                <p>Welcome to the Department of Computer Applications at IK Gujral PTU.</p>
+            </div>
+        </div>
     </div>
-</div>
+
+    <script>
+        // Experiment 13: Login Function
+        function login() {
+            const username = document.getElementById("username").value;
+            document.getElementById("userDisplay").textContent = username;
+            document.getElementById("loginForm").style.display = "none";
+            document.getElementById("profile").style.display = "block";
+            return false; // Prevent form submission (demo only)
+        }
+
+        // Experiment 14: Registration Function
+        function register() {
+            document.getElementById("registerForm").style.display = "none";
+            document.getElementById("regSuccess").style.display = "block";
+            return false; // Prevent form submission (demo only)
+        }
+
+        // Experiment 15: Contact Form Validation
+        function validateContact() {
+            const email = document.getElementById("contactEmail").value;
+            if (!email.includes("@") || !email.includes(".")) {
+                alert("Please enter a valid email address!");
+                return false;
+            }
+            alert("Form submitted successfully!");
+            return false; // Prevent form submission (demo only)
+        }
+    </script>
 
 </body>
 </html>
