@@ -1,0 +1,770 @@
+/* ===== BASE STYLES ===== */
+/* Reset all default margins and padding for consistent cross-browser rendering */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width/height */
+    scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+}
+
+/* Base body styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Set default font */
+    line-height: 1.6; /* Improve text readability */
+    background-color: #f4f4f4; /* Light mode background */
+    color: #333; /* Light mode text color */
+    transition: all 0.4s ease; /* Smooth transitions for dark mode toggle */
+}
+
+/* ===== GLOBAL DARK MODE ===== */
+/* Main dark mode styles with gradient background */
+.dark-mode {
+    background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%) !important;
+    color: #e0e0e0; /* Light gray text for better readability in dark mode */
+}
+
+/* Fallback solid color for dark mode */
+.dark-mode {
+    background-color: #121212 !important;
+    color: #e0e0e0;
+}
+
+/* Section-specific dark mode overrides with semi-transparent backgrounds */
+.dark-mode .experience,
+.dark-mode .learning,
+.dark-mode .progress,
+.dark-mode .resources {
+    background-color: rgba(30, 30, 30, 0.9); /* Dark gray with transparency */
+    backdrop-filter: blur(5px); /* Slight blur for depth effect */
+}
+
+/* Experience section needs transparent background for glow effect */
+.dark-mode .experience {
+    background: transparent !important;
+}
+
+/* Card styling in dark mode */
+.dark-mode .project-card,
+.dark-mode .content,
+.dark-mode .skill-card,
+.dark-mode .resource-list li {
+    background: rgba(45, 45, 45, 0.8) !important; /* Slightly lighter than background */
+}
+
+/* Project card border in dark mode */
+.dark-mode .project-card {
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for definition */
+}
+
+/* Text colors in dark mode */
+.dark-mode p,
+.dark-mode li,
+.dark-mode .experience-content p {
+    color: #e0e0e0 !important; /* Light gray for readability */
+}
+
+/* Heading colors in dark mode */
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4 {
+    color: #ffffff !important; /* Pure white for contrast */
+}
+
+/* Interactive elements in dark mode */
+.dark-mode .btn,
+.dark-mode .project-link,
+.dark-mode .resource-list a {
+    color: #6be5ff !important; /* Bright teal for interactive elements */
+}
+
+/* Form elements in dark mode */
+.dark-mode .contact input,
+.dark-mode .contact textarea {
+    background: rgba(45, 45, 45, 0.8) !important; /* Dark input backgrounds */
+    color: #ffffff !important; /* White text */
+    border: 1px solid #444 !important; /* Darker border */
+}
+
+/* ===== HEADER ===== */
+/* Fixed header at top of page */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111; /* Dark header background */
+    color: #fff;
+    padding: 1rem 2rem;
+    position: sticky; /* Sticks to top when scrolling */
+    top: 0;
+    z-index: 100; /* Ensures header stays above other content */
+}
+
+/* Logo styling */
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Navigation link styling */
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Dark mode toggle button */
+#toggleMode {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== HERO SECTION ===== */
+/* Full viewport height hero section with background image */
+.hero {
+    position: relative;
+    overflow: hidden;
+    background: url('https://source.unsplash.com/1600x900/?technology,coding') no-repeat center center/cover;
+    color: white;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+/* Canvas for starfield animation */
+#stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Behind content */
+    background: transparent;
+}
+
+/* Hero content container */
+.hero-content {
+    position: relative;
+    z-index: 1; /* Above starfield */
+    max-width: 800px;
+    margin: 0 auto;
+    color: #111; /* Dark text for light background */
+}
+
+/* Hero content in dark mode */
+.dark-mode .hero-content {
+    color: #fff; /* White text for dark background */
+}
+
+/* Hero heading */
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Hero paragraph */
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* ===== BUTTONS ===== */
+/* Base button styling */
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 12px 25px;
+    background: #6be5ff; /* Teal background */
+    color: white;
+    border: none;
+    border-radius: 30px; /* Pill shape */
+    font-weight: 500;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.4s ease;
+}
+
+/* Button hover effect */
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(107,229,255,0.4) 30%, transparent 70%);
+    transform: translateX(0);
+    transition: transform 0.6s ease;
+    z-index: 0;
+    filter: blur(8px); /* Glow effect */
+}
+
+/* Button hover state */
+.btn:hover::before {
+    transform: translateX(33%);
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+/* Download resume button */
+.download-resume {
+    display: inline-block;
+    margin: 0 auto 2rem;
+    text-align: center;
+    background: #6be5ff;
+    padding: 12px 25px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.download-resume:hover {
+    background: #4ecbe0; /* Slightly darker teal on hover */
+}
+
+/* ===== SECTION STYLES ===== */
+/* Base section styling */
+section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* About section paragraph styling */
+.about p {
+    font-size: 1.1rem;
+    text-align: justify; /* Evenly aligned text */
+}
+
+/* ===== EXPERIENCE SECTION ===== */
+.experience {
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+/* Light mode experience section */
+.experience:not(.dark-mode) {
+    background-color: #f8f9fa;
+    background-image: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+}
+
+/* Experience item cards */
+.experience-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-left: 4px solid #6be5ff; /* Teal accent border */
+}
+
+/* Experience item in dark mode */
+.dark-mode .experience-item {
+    background: rgba(30, 30, 30, 0.7);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-left: 4px solid #6be5ff;
+    backdrop-filter: blur(10px);
+}
+
+/* Hover effect for experience items */
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.dark-mode .experience-item:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+/* Experience content headings */
+.experience-content h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.dark-mode .experience-content h3 {
+    color: #6be5ff; /* Teal headings in dark mode */
+}
+
+.experience-content h4 {
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.dark-mode .experience-content h4 {
+    color: #bdc3c7;
+}
+
+.experience-content p {
+    margin: 0.8rem 0;
+    line-height: 1.7;
+}
+
+/* Timeline effect for experience items */
+.experience-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background: #6be5ff;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s ease;
+}
+
+.experience-item:hover::before {
+    transform: scaleY(1); /* Animated vertical line on hover */
+}
+
+
+/* ===== SKILLS SECTION ===== */
+.skills .skill {
+    margin: 1rem 0;
+}
+
+/* Skill bar container */
+.skill-bar {
+    height: 10px;
+    background: #222;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Animated skill bar fill */
+.skill-bar .fill {
+    height: 100%;
+    background: linear-gradient(to right, #6be5ff, #0099ff);
+    animation: fillAnim 2s ease forwards; /* Animate on load */
+}
+
+@keyframes fillAnim {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* ===== TECH STACK SECTION ===== */
+.tech-stack .icons {
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.tech-stack img {
+    width: 50px;
+    height: 50px;
+    filter: grayscale(1); /* Initially grayscale */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.tech-stack img:hover {
+    filter: grayscale(0); /* Color on hover */
+    transform: scale(1.1); /* Slightly enlarge */
+}
+
+/* Responsive adjustments for tech stack */
+@media (max-width: 600px) {
+    .tech-stack .icons {
+        gap: 40px;
+    }
+
+    .tech-stack img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* ===== PROJECTS SECTION ===== */
+.projects {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.dark-mode .project-card {
+    background: #1e1e1e;
+    color: #f0f0f0;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.project-card a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===== SOCIALS SECTION ===== */
+.socials {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.social-icons {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+.social-icons a {
+    background: #333;
+    color: white;
+    padding: 0.8rem;
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons a i {
+    font-size: 1.5rem;
+}
+
+.social-icons a:hover {
+    background: #555;
+    transform: scale(1.1);
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact input, 
+.contact textarea {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact button {
+    padding: 12px;
+    background: #333;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.contact button:hover {
+    background: #555;
+}
+
+#formMessage {
+    margin-top: 10px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* ===== GITHUB STATS SECTION ===== */
+.github {
+    text-align: center;
+}
+
+.github img {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+
+/* ===== LOADING ANIMATION ===== */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #121212;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.loader.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loader-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(107, 229, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #6be5ff;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.dark-mode .loader {
+    background: #121212;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #000;
+    color: #ccc;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    nav {
+        margin: 1rem 0;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    section {
+        padding: 2rem 1rem;
+    }
+    
+    .tech-stack .icons {
+        gap: 15px;
+    }
+    
+    .tech-stack img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* ===== LEARNING JOURNEY SECTION ===== */
+.learning {
+    padding: 3rem 1rem;
+    background: #f5f7fa;
+}
+
+.learning-path {
+    max-width: 600px;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.milestone {
+    display: flex;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.date {
+    width: 80px;
+    font-weight: bold;
+    color: #6be5ff;
+}
+
+.content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    flex: 1;
+}
+
+/* ===== PROGRESS SECTION ===== */
+.progress {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.skill-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.skill-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.skill-card i {
+    font-size: 2.5rem;
+    color: #6be5ff;
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #eee;
+    border-radius: 4px;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+.progress-bar span {
+    display: block;
+    height: 100%;
+    background: #6be5ff;
+    border-radius: 4px;
+}
+
+/* ===== PROJECT GALLERY ===== */
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.project-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 0 1rem;
+    margin-top: 1rem;
+}
+
+.project-card p {
+    padding: 0 1rem;
+    color: #666;
+}
+
+.project-link {
+    display: inline-block;
+    margin: 1rem;
+    color: #6be5ff;
+    text-decoration: none;
+}
+
+/* ===== RESOURCES SECTION ===== */
+.resources {
+    padding: 3rem 1rem;
+    background: #f5f7fa;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.resource-list {
+    margin-top: 1.5rem;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.resource-list li {
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.resource-list li:hover {
+    transform: translateY(-5px);
+}
+
+.resource-list a {
+    color: #6be5ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.resource-list a:hover {
+    color: #3399cc;
+    text-decoration: underline;
+}
+
+/* ===== FADE-IN ANIMATION ===== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
